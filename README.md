@@ -4,6 +4,7 @@
 1. 10月5日（木）はじめの一歩
 2. 10月5日（木）github リポジトリ作成
 3. 10月12日　(木)　文字列の計算、変数の宣言、代入、複合演算子とインクリメント、doumentオブジェクトとDOM
+4. 10月19日 (木)　コレクション
 
 ## 10月12日
 
@@ -94,6 +95,47 @@
     </script>
  ```
 
+    sample3-20
+ ```js
+     <script>
+        for (let i = 0; i < 4; i++) {
+            //繰り返しの処理を書いていきます。
+            //0~3を表示したい。
+            console.log(i);
+
+
+            const name_list = ["松田", "田中", "中山", "山本", "本田"];
+            console.log(name_list);
+
+            console.log(name_list[3]);
+
+            for (let i = 0; i < 5; i++);
+            console.log(name_list[1]);
+
+        }
+    ```
+
+```js
+
+    <script>
+        const fruits = ["りんご", "もも", "バナナ"];
+
+        console.log(fruits[2]);
+
+        //ulをjavascript空間に引きずり込む
+        const element = document.querySelector("#fruitslist");
+        console.log(element);
+
+        for (let i = 0; i < fruits.length; i++) {
+            const lilast = document.createElement("li");
+
+            //liに値（果物→配列fruitsの中にある）を代入
+            console.log(fruits[i]); //りんご、もも、バナナが取れる
+            lilast.textContent = fruits[i];
+            element.appendChild(lilast);
+
+        }
+```
 ## 10 月 5 日
 
 - インターネットの基本について理解する。
