@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>要素の取得と追加</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+  <section>
+    <h1>犬のギャラリー</h1>
+    <div class="card1">
+      <h2>柴犬の散歩</h2>
+      <p>雨だったけど、散歩に連れて行った</p>
+    </div>
+    <div class="card2">
+      <h2>秋田犬の寝顔</h2>
+      <p>普段は不細工だけど、寝顔はかわいい</p>
+    </div>
+    <img src="images/dog001.png" alt="柴犬" id="pochi" class="shibaDog" />
+    <img src="images/dog002.png" alt="秋田犬" id="hachiko" class="akitaDog" />
+  </section>
+  <script>
+    //ここに記述していきます
+
+    const shiba = document.querySelector("#pochi");
+    console.log(shiba);
+
+    const akita = document.querySelector("#hachiko");
+    console.log(akita);
+
+    const shiba_card = document.querySelector(".card1");
+    console.log(shiba_card);
+    shiba_card.appendChild(shiba);
+
+    const akita_card = document.querySelector(".card2");
+    console.log(akita_card);
+    akita_card.appendChild(akita);
+  </script>
+
+  <script>
+    //両方とも秋田犬にする
+    const shibainu = document.querySelector(".shibaDog");
+    shiba.setAttribute("src", "images/dog002.png");
+    //Attributeは属性という意味
+  </script>
+
+
+
+
+
+</body>
+
+</html>

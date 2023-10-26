@@ -5,6 +5,7 @@
 2. 10月5日（木）github リポジトリ作成
 3. 10月12日　(木)　文字列の計算、変数の宣言、代入、複合演算子とインクリメント、doumentオブジェクトとDOM
 4. 10月19日 (木)　コレクション
+5. 10月26日　(木)　その他の document オブジェクトのメソッド　イベント
 
 ## 10月12日
 
@@ -43,6 +44,7 @@
         //再代入
         PI = 3.14159265;
  ```
+
 
 ### 複合演算子とインクリメント
 ```js
@@ -135,6 +137,37 @@
             element.appendChild(lilast);
 
         }
+```
+
+```js
+    <script>
+        const btn = document.querySelector("#btn");
+        console.log(btn);
+
+
+        function showMessage() {
+            alert("イベントが発生しました。")
+        }
+
+        //イベント
+        //何に何かをしたら、どうなる
+        //「ボタン」に「クリック」をしたら、「アラートが出る」
+        btn.addEventListener("click", showMessage);
+        //加える+イベント+リスト
+
+        //関数を使わない
+        const nonFuncBtn = document.querySelector("#nonFunc");
+        nonFuncBtn.addEventListener("click", function () {
+            alert("関数を使わないボタンをクリック");
+        });
+
+        //例）「ブラウザで発生する主なイベント」から"resize"（サイズが変更する）タイミングで console に文字が発生するようにします。
+        //resizeは、DOM内にはありませんのでwindowで取得します。
+        window.addEventListener("resize", function () {
+            //ここに処理を書きます。
+            console.log("サイズが変わりました。");
+        });
+    </script>
 ```
 ## 10 月 5 日
 
