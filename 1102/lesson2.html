@@ -26,16 +26,21 @@
 
         //赤くなくイベント
         const redBtn = document.querySelector(".redder");
+        console.log(redBtn);
         redBtn.addEventListener("click", function () {
             //属性値の値を設定
-            text.setAttribute("class", "redText");
+            text.classList.toggle("redText");
+            redBtn.textContent = "もとに戻す";
         });
 
         //大きくなるイベント
         const bigBtn = document.querySelector(".bigger");
+        console.log(bigBtn);
         bigBtn.addEventListener("click", function () {
             //属性値の値を設定
-            text.setAttribute("class", "bigText");
+            text.classList.toggle("bigText");
+            if (text.classList.contains("bigBtn"))
+                bigBtn.textContent = "もとに戻す";
         });
 
     </script>

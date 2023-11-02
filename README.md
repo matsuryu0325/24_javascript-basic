@@ -6,10 +6,52 @@
 3. 10月12日　(木)　文字列の計算、変数の宣言、代入、複合演算子とインクリメント、doumentオブジェクトとDOM
 4. 10月19日 (木)　コレクション
 5. 10月26日　(木)　その他の document オブジェクトのメソッド　イベント
+6. 11月2日　　（木）classlistとイベント
 
 ## 10月12日
 
 - リテラルと演算子
+
+### classlist
+
+```js
+<script>
+        //全部javascript内に持ってくる
+        const h1_element = document.querySelector("h1");
+        //確認
+        console.dir(h1_element);
+
+        //hasAttribute
+        const has_result = h1_element.hasAttribute("class");
+        console.log("has_result");
+
+        //getAttribute
+        const get_result = h1_element.getAttribute("class");
+        console.log(get_result);
+
+        //classname classの値を上書きできる
+        h1_element.className = "title sitename";
+
+        //classlist.add 加えたいとき
+        h1_element.classList.add("w-full");
+
+        //elem.classList.remove("class"); //クラスの削除をします。
+        h1_element.classList.remove("sitename");
+        //elem.classList.toggle("class"); //クラスが存在する場合は削除します。なければ追加します。
+        const body_element = document.body;
+        body_element.addEventListener("click", function () {
+            body_element.classList.toggle("red");
+        })
+        // elem.classList.contains("class"); //クラスをの有無をチェックし、true/falseを返します。
+        const contains_result = h1_element.classList.contains("sitename");
+        console.log(contains_result);//上で削除しているのでfalse
+    </script>
+
+```
+
+
+
+
 
 ### 文字列の計算
 
