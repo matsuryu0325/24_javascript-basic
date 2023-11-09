@@ -7,6 +7,7 @@
 4. 10月19日 (木)　コレクション
 5. 10月26日　(木)　その他の document オブジェクトのメソッド　イベント
 6. 11月2日　　（木）classlistとイベント
+7. 11月9日　（木）if文・switch文
 
 ## 10月12日
 
@@ -15,7 +16,60 @@
 ### classlist
 
 ```js
-<script>
+    <script>
+        const text = document.querySelectorAll("p");
+        console.log(text);
+
+        for (let i = 0; i < text.length; i++) {
+            //nodelistだから
+            console.log(i);
+            text[i].addEventListener("click", function () {
+                this.classList.add("slide")
+            });
+        }
+    </script>
+```
+
+
+
+
+
+```js
+<h1>if文による条件分岐</h1>
+    <script>
+        /* ※ブロックコメント
+      条件分岐のサンプル(1)
+      if文による条件分岐*/
+
+        const num = 100;
+
+        //条件分岐 ※行コメント
+        if (true) {
+            document.body.insertAdjacentHTML("beforeEnd", "<p>numは100以上</p>");
+        } else if (num === 0) {
+            document.body.insertAdjacentHTML("beforeEnd", "<p>numは100以上</p>");
+        } else {
+            document.body.insertAdjacentHTML("beforeEnd", "<p>numは100以上</p>");
+        }
+
+        console.log(num >= 100);
+
+        console.log(1 == 1);
+        console.log(1 === 1);
+
+        console.log(1 == "1");
+        console.log(1 === "1");//""文字列型　"""がないと数値型、型が違う　===のときはfalse
+    </script>
+
+    ```
+
+
+
+
+
+
+```js
+    <script>
         //全部javascript内に持ってくる
         const h1_element = document.querySelector("h1");
         //確認
@@ -46,7 +100,6 @@
         const contains_result = h1_element.classList.contains("sitename");
         console.log(contains_result);//上で削除しているのでfalse
     </script>
-
 ```
 
 
