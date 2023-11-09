@@ -23,19 +23,15 @@
     const fujiImg_list = ["mt-fuji001.jpg", "mt-fuji002.jpg", "mt-fuji003.jpg"];
 
     // 画像のタグ<img>要素を変数に取得
-    const mtfujiimg = document.querySelector("#mt-fuji")
+    const imageArea = document.querySelector("#mt-fuji");
 
-    //富士山のボタン全てを querySelectorAll で変数に取得
-    const mtfujiBtn = document.querySelectorAll(".image-fuji")
-    console.log(mtfujiBtn);
-
-    console.log(mtfujiBtn[0]);
-
-    mtfujiBtn[0].addEventListener("click", function () {
-      console.log("クリック");
-      //imgのsrcを配列から設定する。
-    })
-
+    //
+    const btns = document.querySelectorAll(".image-fuji");
+    for (let i = 0; i < btns.length; i++) {
+      btns[i].addEventListener('click', function () {
+        imageArea.setAttribute("src", `images/${fujiImg_list[i]}`)
+      })
+    }
 
 
 
