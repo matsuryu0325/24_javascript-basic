@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>演習</title>
+</head>
+
+<body>
+    <ul>
+        <li>犬</li>
+        <li>猫</li>
+    </ul>
+    <p class="result"></p>
+    <script>
+        const dogBtn = document.querySelector("li");
+        const catBtn = document.querySelector("li:nth-child(2)");
+        const resultArea = document.querySelector(".result");
+        console.log(dogBtn, catBtn);
+
+
+        //関数
+        console.log("あなたは、◯派です");
+        const animalChect = function (animal) {
+            resultArea.textContent = "あなたは" + animal + "派です";
+        }
+
+        dogBtn, addEventListener("click", function () {
+            console.dir(this);
+            animalChect(this, textContent);
+        });
+
+        catBtn, addEventListener("click", function () {
+            console.dir(this);
+            animalChect(this, textContent);
+        });
+
+
+
+        //関数の定義
+
+        const yoshinoya = function (menu, size, topping, price) {
+            console.log(menu + "の" + size + "、" + topping + "で" + price + "円");
+        }
+
+
+        //関数の実行
+        yoshinoya("牛丼", "並盛", "つゆだく", 388); //牛丼の並盛、つゆだくで 388 円
+        yoshinoya("豚丼", "大盛", "たまご", 592); //豚丼の大盛、たまごで 592 円
+
+
+
+
+
+        //引数が配列
+        const sumCard = function (card) {
+            let total = 0;
+            //すべてを足す処理
+            for (let i = 0; i < card.length; i++) {
+                total += card[i]; //toral = total + card[i]
+            }
+            console.log(total);
+        };
+        //配列
+        const card_list = [1, 2, 3, 4];
+
+        //関数の実行　引数には配列
+        sumCard(card_list); //10
+
+
+        const member_list = ["チェウォン", "サクラ", "ユンジン", "カズハ", "ウンチェ"];
+        const mugiwara_list = ["モンキー・D・ルフィ", "ナミ", "ロロノア・ゾロ", "ヴィンスモーク・サンジ", "ウソップ", "トニートニー・チョッパー", "ニコ・ロビン", "フランキー", "ブルック", "ジンベエ"];
+
+        const memberArea = document.querySelector(".fnArea");
+        const memberPush = function (members) {
+            //memberAreaにul,liで各メンバーを入れる
+
+            console.log(members);
+            const ulElm = document.createElement("ul");
+            for (let i = 0; i < members.length; i++) {
+                const liElm = document.createElement("li");
+                liElm.textContent = members[i];
+                console.log(members[i]);
+
+            }
+
+        }
+
+        //関数の実行
+        memberPush(member_list);
+        memberPush(mugiwara_list);
+    </script>
+</body>
+
+</html>
