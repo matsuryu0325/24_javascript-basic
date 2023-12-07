@@ -8,6 +8,38 @@
 5. 10月26日　(木)　その他の document オブジェクトのメソッド　イベント
 6. 11月2日　　（木）classlistとイベント
 7. 11月9日　（木）if文・switch文
+8. 12月7日　（木） 関数、引数と戻り値
+
+
+```js
+ const takeOutBtn = document.querySelector(".takeOut");
+
+        const calculation = function (cake, tax) {
+            const result = cake + cake * tax;
+            return result;
+        }
+
+        takeOutBtn.addEventListener("click", function () {
+            const price = calculation(cake, 0.08);
+            result.innerHTML = price;
+        })
+
+        const eatInBtn = document.querySelector(".eatIn");
+
+        eatInBtn.addEventListener("click", function () {
+            const price = calculation(cake, 0.10);
+            result.innerHTML = price;
+        })
+        const result = document.querySelector(".taxIn");
+```
+
+
+
+
+
+
+
+
 
 ## 10月12日
 

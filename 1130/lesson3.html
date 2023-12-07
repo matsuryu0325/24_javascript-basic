@@ -13,6 +13,9 @@
         <li>猫</li>
     </ul>
     <p class="result"></p>
+
+    <button class="lesserafim">ルセラフィム</button>
+    <button class="onepeace">麦わらの一味</button>
     <script>
         const dogBtn = document.querySelector("li");
         const catBtn = document.querySelector("li:nth-child(2)");
@@ -21,20 +24,20 @@
 
 
         //関数
-        console.log("あなたは、◯派です");
-        const animalChect = function (animal) {
-            resultArea.textContent = "あなたは" + animal + "派です";
-        }
+        //console.log("あなたは、◯派です");
+        //const animalChect = function (animal) {
+        //resultArea.textContent = "あなたは" + animal + "派です";
+        // }
 
-        dogBtn, addEventListener("click", function () {
-            console.dir(this);
-            animalChect(this, textContent);
-        });
+        //dogBtn, addEventListener("click", function () {
+        //console.dir(this);
+        //animalChect(this, textContent);
+        //});
 
-        catBtn, addEventListener("click", function () {
-            console.dir(this);
-            animalChect(this, textContent);
-        });
+        //catBtn, addEventListener("click", function () {
+        //console.dir(this);
+        //animalChect(this, textContent);
+        //});
 
 
 
@@ -88,8 +91,44 @@
         }
 
         //関数の実行
-        memberPush(member_list);
-        memberPush(mugiwara_list);
+        //memberPush(member_list);
+        //memberPush(mugiwara_list);
+
+        // const lesserafimBtn = document.querySelector("lesserafim");
+        // lesserafimbtn.addEventListener("click", function () {
+        // console.log("ルセラフィム");
+        // memberPush(member_list);
+        //});
+
+
+        //const onepeacebtn = document.querySelector(".onepeace");
+        //onepeacebtn.addEventListener("click", function () {
+        //console.log("麦わらの一味");
+        // });
+
+
+
+        //引数1と引数2を足す、関数の定義
+        const addition = function (a, b) {
+            const c = a + b;
+            console.log(c);
+        }
+
+        //関数の実行
+        addition(10, 11);
+        addition(30, "6");
+
+        //戻り値のある関数の定義
+        const addition2 = function (a, b) {
+            const c = a = b
+            return c;
+        }
+
+        //関数の実行
+        const result = addition2(5, 5)
+        console.log(result);
+
+
     </script>
 </body>
 
