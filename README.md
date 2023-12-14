@@ -9,6 +9,7 @@
 6. 11月2日　　（木）classlistとイベント
 7. 11月9日　（木）if文・switch文
 8. 12月7日　（木） 関数、引数と戻り値
+9. 12月14日（木）　コールバック関数、アロー関数
 
 
 ```js
@@ -33,6 +34,110 @@
         const result = document.querySelector(".taxIn");
 ```
 
+-  アロー関数
+
+"return" 戻り値
+
+
+
+
+```js
+
+<script>
+        const dog = function () {
+            return "わんわん";
+        }
+        //関数の定義
+        function dog2() {
+            return "バウワウ";
+        }
+
+        //関数dogを実行=()があるから
+        console.log(dog());
+        console.log(dog2());
+
+
+        const cat = () => {
+            return "にゃーにゃー";
+        }
+
+        //関数catの実行
+        console.log(cat());
+
+
+
+        //鳴き方を決めたい
+        const animal = (voice) => {
+            return voice;
+        }
+
+        //関数animalの実行
+        //みゃあみゃあ
+
+
+        console.log(animal("みゃあみゃあ"));
+
+
+        const thisElm = document.querySelector("p");
+        console.log(thisElm);
+
+        thisElm.addEventListener("click", (e) => {
+            console.log("クリック")
+            //console.log(this.textContent);
+            console.log(e.target.innerText);
+        });
+
+    </script>
+```
+
+
+
+- コールバック関数
+
+```js
+
+    <script>
+        //関数①
+        const concatenateSpace = function (lastName, firstName) {
+            return lastName + " " + firstName;
+        };
+        //関数②
+        const useConcatenate = function (name, func) {
+            //nameには　関数式①
+            let concatName = func(name[0], name[1]);
+            console.log("結合結果：" + concatName);
+        };
+
+        let nameParam = ["松岡", "琉志"];//配列
+
+        //関数式②の実行（引数① =　配列,引数② = 関数の名前）
+        useConcatenate(nameParam, concatenateSpace);
+
+        //結合結果：中田 雄二
+
+        //コールバック関数基本　※よく使う
+        //関数式①
+        const testFunc = function (func) {
+            //funcには、関数式②
+            //関数の実行後すぐに表示
+            console.log("testFuncが実行されました");
+
+            //2秒後、実行
+            setTimeout(function () {
+                func();
+            }, 2000);
+        };
+
+        //関数式②
+        const callback = function () {
+            console.log("callbackが実行されました");
+        };
+
+        //関数式①を実行している
+        //callbackは関数式②の関数名
+        testFunc(callback);
+    </script>
+```
 
 
 
