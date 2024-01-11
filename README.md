@@ -10,6 +10,59 @@
 7. 11月9日　（木）if文・switch文
 8. 12月7日　（木） 関数、引数と戻り値
 9. 12月14日（木）　コールバック関数、アロー関数
+10. 1月11日（木）　フォームとオブジェクトとクラス
+
+1月11日
+
+```js
+ <script>
+        const person = {
+            nome: "",
+            age: 0,
+            information: function () {
+                return "名前:" + this.name + "\n年齢i" + this.age;
+            },
+        };
+
+        person.name = "山田太郎";
+        person.age = 18;
+
+        console.log(person.information());
+
+        const myCar_list = {}; //空のオブジェクトを作成
+        myCar_list.make = "Ford";
+        myCar_list.model = "Mustang";
+        myCar_list.year = 1969;
+        console.log(myCar_list);
+        //{make: 'Ford', model: 'Mustang', year: 1969}
+        console.log(myCar_list.model, myCar_list.year);
+        // objectは順番を担保しない
+
+        myCar_list["2021"] = "51年"; //ブランケットで設定
+
+        console.log(myCar_list);
+        console.log(myCar_list["2021"]);
+
+
+        const dict = { apple: "林檎", banana: "バナナ", orange: "オレンジ", };
+        //新規登録
+        dict.grape = "ぶどう";
+
+        //削除
+        delete dict.orange;
+        console.log(dict);
+
+        //再代入
+        dict.apple = "りんご";
+        console.log(dict);
+    </script>
+```
+
+
+
+
+
+
 
 
 ```js
