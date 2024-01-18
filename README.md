@@ -11,6 +11,138 @@
 8. 12月7日　（木） 関数、引数と戻り値
 9. 12月14日（木）　コールバック関数、アロー関数
 10. 1月11日（木）　フォームとオブジェクトとクラス
+11. 1月18日（木）　オブジェクト
+
+1月18日
+```js
+<script>
+        const countries = {
+            Japan: "日本",
+            USA: "アメリカ",
+            China: "中国",
+            Korea: "韓国",
+        };
+
+        console.log(countries.USA); //アメリカがほしい
+
+        //for...in文
+        for (let country in countries) {
+            console.log(countries[country]);
+        }
+
+        const meibo_obj = [ //[]で囲まれているので、配列
+            { id: "20224", name: "新井太郎" }, //{}で囲まれているので、オブジェクト
+            { id: "20031", name: "井上次郎" },
+            { id: "20193", name: "山本花子" }
+        ];
+        //オブジェクトが３つはいっているオブジェクト
+        //配列の要素が全部欲しいfor文
+        for (let i = 0; i < meibo_obj.length; i++) {
+            console.log(meibo_obj[i]);
+            for (let key in meibo_obj[i]) {
+                console.log(key); //id,name
+                console.log(meibo_obj[i][key]); //20224 新井太郎
+            }
+        }
+
+        let npbCentral_list = [
+            { team: "東京ヤクルトスワローズ", home: "東京" },
+            { team: "阪神タイガース", home: "大阪" },
+            { team: "読売ジャイアンツ", home: "東京" },
+            { team: "広島東洋カープ", home: "広島" },
+            { team: "中日ドラゴンズ", home: "名古屋" },
+            { team: "横浜DeNAベイスターズ", home: "横浜" },
+        ];
+        //中日ドラゴンズの本拠地をconsoleに表示する
+        //配列の指定→オブジェクトの指定
+        //for文、for..in文は使わなくて良い
+
+        console.log(npbCentral_list[4].home);
+    </script>
+```
+
+```js
+
+<body>
+    <ul>
+        <li>りんご</li>
+        <li>みかん</li>
+        <li>パイナップル</li>
+    </ul>
+    <script>
+        //値を変更したい場合は、添字で指定
+        const animals = ["dog", "cat", "bird"];
+        animals[2] = "lion";
+        console.log(animals);
+
+        animals.push("tiger");
+        console.log(animals.length); //4
+        console.log(animals);
+
+        //NodelistやHTMLCOllectionは、配列の便利なメソット
+        const fruits = document.querySelectorAll("li");
+        console.log(fruits); //Nodelist　（配列っぽいもの Array Like）
+        //fruits.push("<li>いちご</li>");
+
+        animals.unshift("elephant");
+        console.log(animals);
+
+        animals.pop();
+        console.log(animals);
+        //["elephant", "dog", "cat", "lion"];
+
+        animals.shift();
+        console.log(animals);
+        //["dog", "cat", "lion"];
+    </script>
+
+    <ul class="junishis"></ul>
+    <script>
+        const junishi = ["丑", "寅", "卯", "辰", "巳", "午", "未", "申", "酉", "戌"];
+        const twopieces = ["子", "亥"];
+        const junishis = document.querySelector(".junishis");
+
+        //配列junishisに子と亥を追加する
+        twopieces[0];
+        twopieces[1];
+
+        //先頭に追加する場合は、unshift
+        junishi.unshift("子");
+
+
+
+        for (eto of junishi) {
+            const list = document.createElement("li");
+            list.innerHTML = eto;
+            junishis.appendChild(list);
+        }
+
+        const staff = [
+            ["佐藤", 41, "板橋"],
+            ["鈴木", 25, "大阪"],
+            ["林", 34, "札幌"],
+        ];
+
+        for (let i = 0; i < staff.length; i++) {
+            console.log(staff[i][0]);
+            //全部要素を取りたい
+            //ネスト（入れ子）の場合は、iの次はjを使う
+            for (let i = 0; i < staff[i].length; j++) {
+                console.log(staff[i][j])
+                //jの次はkを使う
+                //for文のネストは３階層まで、４以上になる場合はおかしい
+            }
+        }
+    </script>
+```
+
+
+
+
+
+
+
+
 
 1月11日
 
