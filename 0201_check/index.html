@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0201_check</title>
+</head>
+
+<body>
+
+    <div class="counter">
+        <button class="decrease">-</button>
+        <span class="count">0</span>
+        <button class="increase">+</button>
+    </div>
+
+    <h1>三大栄養素</h1>
+    <ul>
+        <li class="protein">たんぱく質</li>
+        <li class="fats">脂質</li>
+        <li class="carbohydrate">炭水化物</li>
+    </ul>
+
+    <style>
+        .tabcontent.show {
+            display: block;
+        }
+
+        .tabcontent {
+            display: none;
+        }
+    </style>
+
+
+    <div class="tab">
+        <button class="tablinks">Tab1</button>
+        <button class="tablinks">Tab2</button>
+        <button class="tablinks">Tab3</button>
+    </div>
+
+    <div class="tabcontent show">
+        <h3>Tab1</h3>
+        <p>タブ1のコンテンツです。</p>
+    </div>
+    <div class="tabcontent">
+        <h3>Tab2</h3>
+        <p>タブ2のコンテンツです。</p>
+    </div>
+    <div class="tabcontent">
+        <h3>Tab3</h3>
+        <p>タブ3のコンテンツです。</p>
+    </div>
+
+
+    <style>
+        .modal {
+            transition: all 1s ease-in;
+            opacity: 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #eee;
+            border: 1px solid #cdcdcd;
+            padding: 1rem;
+        }
+
+        .modal.active {
+            opacity: 1;
+        }
+    </style>
+
+    <button id="openModalBtn">Open Modal</button>
+
+    <div class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p>モーダルウィンドウです。</p>
+        </div>
+    </div>
+
+    <script>
+        const name = "大谷翔平の";
+        const number = "背番号は";
+        const num = "17";
+        const two = 2;
+        const seven = 7;
+        const ending = "です。"
+
+        //大谷翔平の背番号は17です。
+        const ohtaniText = document.createElement("p");
+        ohtaniText.textContent = name + number + num + ending;
+        document.body.appendChild(ohtaniText);
+
+
+
+
+
+        let pinkBlue = ["ミチヲユケ"];
+        const body = document.querySelector("body");
+
+        const p = document.createElement("p");
+        p.textContent = "ミチヲユケ";
+
+        body.appendChild(p);
+
+
+
+
+
+        const proteinClass = "protein";
+        const fatsClass = "fats";
+        const carbohydrateClass = "carbohydrate";
+
+
+        const lis = document.querySelectorAll("li");
+
+        lis.forEach((li) => {
+            li.addEventListener("click", () => {
+                const nutrient = li.classList.contains(proteinClass) ? "たんぱく質" :
+                    (li.classList.contains(fatsClass) ? "脂質" : "炭水化物");
+
+                console.log(nutrient);
+            });
+        });
+
+
+
+        let count = 0;
+        document.querySelector(".increase").addEventListener("click", () => {
+            count++;
+
+            if (count > 0) {
+                document.querySelector(".count").textContent = count;
+            }
+        });
+        document.querySelector(".decrease").addEventListener("click", () => {
+            count--;
+
+
+            if (count < 0) {
+                count = 0;
+            }
+
+            document.querySelector(".count").textContent = count;
+        });
+
+
+        const modal = document.querySelector(".modal");
+        const closeBtn = document.querySelector(".modal .close");
+
+        document.querySelector("#openModalBtn").addEventListener("click", () => {
+
+            modal.classList.add("active");
+        });
+
+        closeBtn.addEventListener("click", () => {
+            modal.classList.remove("active");
+        });
+
+    </script>
+</body>
+
+</html>
