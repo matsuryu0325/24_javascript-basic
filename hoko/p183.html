@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4日目練習問題</title>
+</head>
+
+<body>
+    <h1>問題4-1</h1>
+    <p>Chromeのコンソールを用いて、次の処理を行いなさい。</p>
+    <ul>
+        <li>(1) 変数arrayを空の配列にする</li>
+        <li>(2) arrayに、pushメソッドを用いて1,2,3という値を挿入する</li>
+        <li>(3) for~of文とconsole.logを用いて配列arrayの内容を表示する</li>
+    </ul>
+    <script>
+        array = [];
+        console.log(array);
+    </script>
+
+    <script>
+        const array = [];
+
+        array.push(1);
+        array.push(2);
+        array.push(3);
+
+        console.log(array);
+    </script>
+
+    <script>
+        for (let i = 0; i < array.length; i++) {
+            console.log(array);
+        }
+    </script>
+</body>
+
+</html>
