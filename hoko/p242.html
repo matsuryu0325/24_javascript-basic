@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>6日目練習問題</title>
+</head>
+
+<body>
+    <h1>計算オブジェクト</h1>
+    <script>
+        const calc = {
+            a: 0,
+            b: 0,
+
+            add: function () {
+                const ans = this.a + this.b;
+                return ans;
+            },
+
+            sub: function () {
+                const ans = this.a - this.b;
+                return ans;
+            }
+        }
+
+        calc.a = 10;
+        calc.b = 5;
+        const calcelemnt = document.querySelector("calc");
+        calcelemnt.insertAdjacentHTML("<p>a=" + calc.a + "</p>");
+        calcelemnt.insertAdjacentHTML("<p>b=" + calc.b + "</p>");
+        calcelemnt.insertAdjacentHTML("<p>a+b=" + calc.add() + "</p>");
+        calcelemnt.insertAdjacentHTML("<p>a-b=" + calc.sub() + "</p>");
+    </script>
+</body>
+
+</html>

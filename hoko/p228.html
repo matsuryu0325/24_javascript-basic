@@ -11,27 +11,26 @@
     <h1>社員データ</h1>
     <table border="1" style="border-collapse: collapse;">
         <tr>
-            <th>名前</th>
-            <th>年齢</th>
-            <th>出身地</th>
+            <th>順位</th>
+            <th>住みたい街</th>
+            <th>都道府県</th>
         </tr>
         <script>
-            const staff = [
-                ["佐藤", 41, "東京"],
-                ["鈴木", 25, "大阪"],
-                ["林", 34, "札幌"]
+            const city = [
+                [1, "横浜市", "神奈川県"],
+                [2, "札幌市", "北海道"],
+                [3, "福岡市", "福岡県"],
+                [4, "名古屋市", "愛知県"],
+                [5, "世田谷区", "東京都"]
             ];
 
-            staff.forEach(function (data) {
-                document.body.insertAdjacentHTML("<tr>");
-                data.forEach(function (item) {
-                    document.body.insertAdjacentHTML("<td>" + item + "</td>");
-                });
-                document.body.insertAdjacentHTML("</tr>");
-            });
-
+            const tableelment = document.querySelector("table");
+            city.forEach(function (city) {
+                console.log(city);
+                tableelment.insertAdjacentHTML("beforeend", "<tr><td>" + city[0] + "</td><td>" + city[1] + "</td><td>" + city[2] + "</td><tr>")
+            })
         </script>
-
+    </table>
 </body>
 
 </html>
