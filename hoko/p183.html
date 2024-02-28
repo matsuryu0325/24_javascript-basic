@@ -8,6 +8,10 @@
 </head>
 
 <body>
+    <ol>
+
+
+    </ol>
     <h1>問題4-1</h1>
     <p>Chromeのコンソールを用いて、次の処理を行いなさい。</p>
     <ul>
@@ -42,9 +46,11 @@
     <h1>小学生がなりたい職業ランキング</h1>
     <ul>
         <script>
-            const Profession = ["野球選手", "医師", "ユーチューバー", "サッカー選手"];
-            for (let i = 0; i < Profession.length; i++) {
-                document.querySelector(Profession[i]);
+            const ranking = ["サッカー選手、監督", "野球選手", "医師", "ユーチュウバー"];
+            const olelemnt = document.querySelector("ol");
+            for (let i = 0; i < ranking.length; i++) {
+                olelemnt.insertAdjacentHTML("beforeend", "<li>" + ranking[i] + "</li>");
+                console.log(ranking[i]);
             }
         </script>
     </ul>

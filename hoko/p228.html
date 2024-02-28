@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>問題5-3</title>
+</head>
+
+<body>
+    <h1>社員データ</h1>
+    <table border="1" style="border-collapse: collapse;">
+        <tr>
+            <th>名前</th>
+            <th>年齢</th>
+            <th>出身地</th>
+        </tr>
+        <script>
+            const staff = [
+                ["佐藤", 41, "東京"],
+                ["鈴木", 25, "大阪"],
+                ["林", 34, "札幌"]
+            ];
+
+            staff.forEach(function (data) {
+                document.body.insertAdjacentHTML("<tr>");
+                data.forEach(function (item) {
+                    document.body.insertAdjacentHTML("<td>" + item + "</td>");
+                });
+                document.body.insertAdjacentHTML("</tr>");
+            });
+
+        </script>
+
+</body>
+
+</html>

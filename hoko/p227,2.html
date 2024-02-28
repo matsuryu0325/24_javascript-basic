@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>問題5-2</title>
+</head>
+
+<body>
+    <h1>hellos関数の呼び出し</h1>
+
+    <script>
+        const bodyelem = document.querySelector("body");
+
+        function hellos(num) {
+
+            for (let i = 0; i < num; i++) {
+                bodyelem.insertAdjacentHTML("beforeend", "<p>HellojavaScript<p>");
+            }
+
+        }
+        hellos(3);
+    </script>
+
+</body>
+
+</html>

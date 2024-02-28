@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4日目練習問題</title>
+</head>
+
+<body>
+    <h1>問題4-3</h1>
+    <p>sample4-24.htmlを次のように変更しなさい</p>
+    <h1>人口が多い国ランキング</h1>
+    <table border="1" style="border-collapse: collapse;">
+        <tr>
+            <th>順位</th>
+            <th>国名</th>
+            <th>人口（億人）</th>
+        </tr>
+        <script>
+            const countries = {
+                China: [1, "中国", 14.48],
+                India: [2, "インド", 14.06],
+                Indonesia: [3, "インドネシア", 2.79]
+            };
+            const tableelment = document.querySelector("table");
+            for (let key in countries) {
+                countries[key][0],
+                    countries[key][1],
+                    countries[key][2];
+                console.log(countries[key]);
+                tableelment.insertAdjacentHTML("beforeend", "<tr><td>" + countries[key][0] + "</td><td>" + countries[key][1] + "</td><td>" + countries[key][2] + "</td><tr>");
+            }
+        </script>
+
+    </table>
+</body>
+
+</html>
