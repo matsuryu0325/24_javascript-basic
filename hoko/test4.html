@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>問題9</title>
+</head>
+
+<body>
+    <h1>面積計算オブジェクト</h1>
+    <script>
+        const calc = {
+            a: 0,
+            b: 0,
+            circle: function (a) {
+                const result = a * a * 3.14;
+                return result;
+            },
+            rectangle: function (a, b) {
+                const result = a * b;
+                return result;
+            },
+            triangle: function (a, b, c) {
+                const result = a * b * 1 / 2;
+                return result;
+            }
+        };
+
+        calc.a = 5;
+        calc.b = 10;
+        calc.c = 25;
+
+        const bodyElm = document.body;
+        bodyElm.insertAdjacentHTML("beforeend", "<p>" + "半径" + calc.a + "の円の面積は" + calc.circle(calc.a) + "です。" + "</p>");
+        bodyElm.insertAdjacentHTML("beforeend", "<p>" + "縦" + calc.a + "横" + calc.b + "の長方形の面積は" + calc.rectangle(calc.a, calc.b) + "です。" + "</p>");
+        bodyElm.insertAdjacentHTML("beforeend", "<p>" + "底辺" + calc.a + "高さ" + calc.b + "の三角形の面積は" + calc.triangle(calc.a, calc.b) + "です。" + "</p>");
+    </script>
+</body>
+
+</html>

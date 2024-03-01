@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>問題7</title>
+    <style>
+        table {
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            border: 1px solid #000;
+        }
+    </style>
+</head>
+
+<body>
+    >
+    <h1>2023年映画興行収入ランキングベスト3</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>順位</th>
+                <th>作品名</th>
+                <th>興行収入</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+    <script>
+        const movie = {
+            DUNK: [1, "THE FIRST SLAM DUNK", "157億円"],
+            mario: [2, "ザ・スーパーマリオブラザーズ・ムービー", "140.2億円"],
+            conan: [3, "名探偵コナン 黒鉄の魚影", "138.3億円"]
+        }
+
+        const tableelment = document.querySelector("table");
+
+        for (let key in movie) {
+            movie[key][0],
+                movie[key][1],
+                movie[key][2];
+            console.log(movie[key]);
+            tableelment.insertAdjacentHTML("beforeend", "<tr><td>" + movie[key][0] + "</td><td>" + movie[key][1] + "</td><td>" + movie[key][2] + "</td><tr>");
+        }
+    </script>
+</body>
+
+</html>

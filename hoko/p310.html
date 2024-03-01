@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7日目練習問題</title>
+</head>
+
+<body>
+    <h1>メッセージの変換</h1>
+
+    <p id="msg">ボタンを押してください</p>
+    <input type="button" value="ボタン" id="btn">
+
+    <script>
+        let button = document.getElementById("btn");
+
+        button.addEventListener("click", function () {
+            let element = document.getElementById("msg");
+            element.textContent = "ボタンが押されました";
+        });
+    </script>
+
+</body>
+
+</html>

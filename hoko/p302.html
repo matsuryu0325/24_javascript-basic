@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7日目練習問題</title>
+</head>
+
+<body>
+    <h1>人気のフルーツ一覧</h1>
+    <ul>
+    </ul>
+    <script>
+
+        const fruitselement = document.querySelector("ul");
+
+        const fruits = ["りんご", "もも", "バナナ"];
+        for (let i = 0; i < fruits.length; i++) {
+            console.log(fruits);
+
+            let lilast = document.createElement("li");
+
+            lilast.textContent = fruits[i];
+
+            fruitselement.appendChild(lilast);
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>問題10</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100vh;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .content {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            height: 50%;
+            width: 100%;
+            background-color: #f0f0f0;
+            padding: 10px;
+            text-align: center;
+            transition: top 0.2s ease-in-out;
+        }
+
+        .content.active {
+            top: 50%;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>スライドアップ</h1>
+    <p>ボタンを押すと、メッセージがスライドアップします。</p>
+    <button class="btn">スライドアップ</button>
+
+    <div class="content">
+        <p>メッセージ</p>
+    </div>
+
+    <script>
+        //ここにプログラミングしてください
+        const btn = document.querySelector(".btn");
+        const content = document.querySelector(".content");
+
+        btn.addEventListener("click", () => {
+            content.classList.toggle("active");
+            btn.textContent = btn.textContent === "スライドアップ" ? "スライドダウン" : "スライドアップ";
+        });
+    </script>
+</body>
+
+</html>

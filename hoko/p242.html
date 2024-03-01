@@ -9,6 +9,10 @@
 
 <body>
     <h1>計算オブジェクト</h1>
+
+    <div>
+        <ol class="calcelemnt"></ol>
+    </div>
     <script>
         const calc = {
             a: 0,
@@ -27,12 +31,17 @@
 
         calc.a = 10;
         calc.b = 5;
-        const calcelemnt = document.querySelector("calc");
-        calcelemnt.insertAdjacentHTML("<p>a=" + calc.a + "</p>");
-        calcelemnt.insertAdjacentHTML("<p>b=" + calc.b + "</p>");
-        calcelemnt.insertAdjacentHTML("<p>a+b=" + calc.add() + "</p>");
-        calcelemnt.insertAdjacentHTML("<p>a-b=" + calc.sub() + "</p>");
+
+        const calcelemnt = document.querySelector(".calcelemnt");
+
+
+        calcelemnt.insertAdjacentHTML("beforeend", "<p>a=" + calc.a + "</p>");
+        calcelemnt.insertAdjacentHTML("beforeend", "<p>b=" + calc.b + "</p>");
+        calcelemnt.insertAdjacentHTML("beforeend", "<p>a+b=" + calc.add() + "</p>");
+        calcelemnt.insertAdjacentHTML("beforeend", "<p>a-b=" + calc.sub() + "</p>");
     </script>
+
+
 </body>
 
 </html>

@@ -28,9 +28,9 @@
 
         document.body.insertAdjacentHTML("beforeend", result);
 
-        /* document.body.insertAdjacentHTML("beforeend", result); */
+        const resultelement = document.querySelector("result");
 
-        result.body.insertAdjacentHTML("<p>" + num1 + "と" + num2 + "のうち小さい値は" + result + "です。</p>");
+        resultelement.insertAdjacentHTML("beforeend", "<p>" + num1 + "と" + num2 + "のうち小さい値は" + result + "です。</p>");
     </script>
 
 </body>

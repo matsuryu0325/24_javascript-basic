@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>問題8</title>
+</head>
+
+<body>
+    <h1>Welcome Trident</h1>
+    <ul class="result"></ul>
+    <script>
+        const randomNum = Math.floor(Math.random() * 5) + 1;
+        //ここにwelcome関数を作成してください
+        welcome(randomNum);
+        const bodyelem = document.querySelector("body");
+
+        function welcome(num) {
+            const ul = document.querySelector(".result");
+            for (let i = 0; i < num; i++) {
+                const li = document.createElement('li');
+                li.textContent = "ようこそトライデントへ"
+                ul.appendChild(li)
+            };
+
+        }
+    </script>
+</body>
+
+</html>
